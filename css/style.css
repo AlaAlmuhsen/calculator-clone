@@ -1,0 +1,116 @@
+:root {
+    --main-color: #181f32;
+    --bg-color: #3b4664;
+    --section-margin: 30px;
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    margin: 0px;
+    padding: 0px;
+}
+.calculator {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    color: #ffffff;
+    width: 25%;
+    transform: translate(-50% , -20%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.calculator .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2px;
+    margin-bottom: var(--section-margin);
+}
+.calculator .header .name {
+    font-size: 24px;
+}
+.calculator .header .theme {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.calculator .header .theme-selector {
+    padding: 3px 35px;
+    border-radius: 20px;
+    margin-left: 20px;
+    height: 20px;
+    background-color: var(--main-color);
+    position: relative;
+}
+.calculator .header .theme-selector::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+    border-radius: 50%;
+}
+.calculator .header .theme-selector::after {
+    position: absolute;
+    content: "1 2 3";
+    top: -18px;
+    left: 6px;
+    width: 100%;
+    justify-content: space-between;
+    letter-spacing: 7px;
+}
+.calculator .result {
+    padding: 0px 20px;
+    background-color: var(--main-color);
+    height: 110px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 35px;
+    margin-bottom: var(--section-margin);
+}
+.calculator .area {
+    padding: 20px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+.calculator .area .body {
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(5 , 1fr);
+}
+.calculator .body div {
+    background-color: #eae3db;
+    height: 55px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 26px;
+    box-shadow: #b4a397 0px 4px 0px;
+}
+.reset , .equal{
+    grid-column: span 2;
+}
+.red {
+    box-shadow: rgb(191, 2, 2) 0px 4px 0px !important;
+    background-color: red !important;
+    color: white !important;
+    font-size: 18px !important;
+}
+.del , .reset {
+    box-shadow: #3f4964 0px 4px 0px !important;
+    background-color: #647299 !important;
+    color: white !important;
+    font-size: 18px !important;
+}
